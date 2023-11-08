@@ -20,3 +20,11 @@ function Healer(name, level, spell) {
 
   this.spell = spell;
 }
+
+Warrior.prototype.attack = function () {
+  return `${this.name} attacks with the ${this.weapon}.`;
+}
+
+Healer.prototype.heal = function () {
+  return `${this.name} casts ${this.spell}.`;
+}
