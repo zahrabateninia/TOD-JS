@@ -26,6 +26,11 @@ Warrior.prototype.attack = function () {
 Healer.prototype.heal = function () {
   return `${this.name} casts ${this.spell}.`;
 }
+
+Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
+Object.setPrototypeOf(Healer.prototype, Hero.prototype);
+
 const hero1 = new Warrior('Bjorn', 1, 'axe');
 const hero2 = new Healer('Kanin', 1, 'cure');
+
 console.log(hero1.attack());
