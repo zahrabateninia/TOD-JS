@@ -1,5 +1,4 @@
-#Understanding Prototypes and Inheritance in JavaScript
-##Character Select
+## Understanding Prototypes and Inheritance in JavaScript
 
 With this code we’ve created our Hero constructor with the base properties, created two character constructors called Warrior and Healer from the original constructor, added methods to the prototypes and created individual character instances.
 
