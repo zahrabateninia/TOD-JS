@@ -3,8 +3,6 @@ function Hero(name, level) {
   this.level = level;
 }
 
-let hero1 = new Hero('Bjorn', 1);
-
 Hero.prototype.greet = function () {
   return `${this.name} says hello.`;
 }
@@ -30,3 +28,4 @@ Healer.prototype.heal = function () {
 }
 const hero1 = new Warrior('Bjorn', 1, 'axe');
 const hero2 = new Healer('Kanin', 1, 'cure');
+console.log(hero1.attack());
