@@ -22,3 +22,11 @@ function Player(name, marker) {
  
  player1.sayHello(); // logs "Hello, I'm a player!"
  player2.sayHello(); // logs "Hello, I'm a player!"
+
+// Player.prototype.__proto__
+Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
+
+// Output may slightly differ based on the browser
+player1.valueOf(); // Output: Object { name: "steve", marker: "X", sayName: sayName() }
+player1.hasOwnProperty('valueOf'); // false
+Object.prototype.hasOwnProperty('valueOf'); // true
