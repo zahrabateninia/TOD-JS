@@ -1,2 +1,2 @@
-# TOD-JS
+# TOP-JS
 Exercises of JavaScript course in the Odin Project
