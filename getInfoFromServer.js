@@ -39,9 +39,13 @@ const server = {
 
 // 2: async await
 async function getPersonsInfo(name) {
-    const people = await server.getPeople();
-    const person = people.find(person => { return person.name === name });
-    return person;
+    try {
+      const people = await server.getPeople();
+      const person = people.find(person => { return person.name === name });
+      return person;
+    } catch (error) {
+      // Handle the error
+    }
   }
 getPersonsInfo("Thor")
     .then( result => {
@@ -50,3 +54,4 @@ getPersonsInfo("Thor")
     .catch( error =>{
         console.log(error)
     });
+
