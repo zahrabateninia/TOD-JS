@@ -27,15 +27,22 @@ const server = {
   };
 
 //  Get info from the server, process it and return a promise:
-// 1: Using .then 
-function getPersonsInfo(name){
-    return server.getPeople().then( people =>{
-        return people.find( person => {
-            return person.name === name
-        });
-    });
-}
 
+// 1: .then 
+// function getPersonsInfo(name){
+//     return server.getPeople().then( people =>{
+//         return people.find( person => {
+//             return person.name === name
+//         });
+//     });
+// }
+
+// 2: async await
+async function getPersonsInfo(name) {
+    const people = await server.getPeople();
+    const person = people.find(person => { return person.name === name });
+    return person;
+  }
 getPersonsInfo("Thor")
     .then( result => {
         console.log(result)
