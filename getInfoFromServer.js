@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const server = {
     people: [
       {
@@ -23,3 +25,13 @@ const server = {
       });
     },
   };
+
+//  Get info from the server, process it and return a promise:
+// 1: Using .then 
+function getPersonsInfo(name){
+    return server.getPeople().then( people =>{
+        return people.find( person => {
+            return person.name === name
+        });
+    });
+}
